@@ -1,0 +1,45 @@
+{% extends "refs/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'refs/css/refs.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<h1>Add or Edit Reference</h1>
+
+<div id="doi-prepopulate">
+<p>Search for reference by DOI:</p>
+<form action="{% url 'refs:resolve' pk %}" method="get" class="doi-search-form">
+<p><input name="doi" type="text"> <input type="submit" value="Search">
+</p>
+</form>
+</div>
+
+{% if form.errors %}
+<p class="errorlist">Please correct the errors below.</p>
+{% endif %}
+
+<form action="{% url 'refs:edit' pk %}" method="post" class="add-ref-form">
+{% csrf_token %}
+
+{{ form.non_field_errors }}
+
+{% for field in form %}
+
+<div class="fieldWrapper">
+    {{ field.errors }}
+    <p class="label"><label for="{{ field.id_for_label }}">{{ field.label }}</label></p>
+    {{ field }}
+    {% if field.help_text %}
+    <p class="help">{{ field.help_text|safe }}</p>
+    {% endif %}
+</div>
+
+{% endfor %}
+
+<input type="submit" name="submit" value="Submit">
+</form>
+
+{% endblock %}

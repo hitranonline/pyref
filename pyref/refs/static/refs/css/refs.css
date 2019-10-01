@@ -1,0 +1,65 @@
+div#doi-prepopulate {
+  background-color: #eeeeee;
+  padding: 10px;
+  border: black solid 2px;
+  width: 700px;
+  margin-bottom: 20px;
+}
+
+form.add-ref-form {
+    width: 700px;
+    margin-bottom: 20px;
+}
+
+div.fieldWrapper {
+    margin-bottom: 20px;
+}
+form.add-ref-form p.label {
+  margin: 0 0 0 0;
+}
+form.add-ref-form p.help {
+  margin: 0;
+  font-size: 80%;
+}
+
+input[name="doi"] {
+    width: 500px;
+}
+form.add-ref-form textarea[name="authors"] {
+    width: 700px;
+    height: 100px;
+}
+form.add-ref-form textarea[name="title"] {
+    width: 700px;
+    height: 100px;
+}
+form.add-ref-form textarea[name="title_html"] {
+    width: 700px;
+    height: 100px;
+}
+form.add-ref-form textarea[name="title_latex"] {
+    width: 700px;
+    height: 100px;
+}
+form.add-ref-form input[name="journal"] {
+    width: 700px;
+}
+form.add-ref-form input[name="url"] {
+    width: 700px;
+}
+form.add-ref-form textarea[name="bibtex"] {
+    width: 700px;
+    height: 100px;
+}
+
+form.add-ref-form input[name="submit"] {
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+ul.errorlist {
+    margin: 0;
+}
+.errorlist {
+    color: red;
+}

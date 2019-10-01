@@ -1,0 +1,20 @@
+{% extends "refs/base.html" %}
+{% load static pyref_tags %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'refs/css/refs.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<h1>Reference List</h1>
+
+<p>{{ refs.count }} references.</p>
+{% for ref in refs %}
+<p>
+<a href="{% url "refs:delete" ref.pk %}"><img src="{% static 'refs/images/trashcan.svg' %}"/></a>
+<a href="{% url "refs:edit" ref.pk %}"><img src="{% static 'refs/images/pencil.svg' %}"/></a>
+{% ref_html ref 3 %}</p>
+{% endfor %}
+
+{% endblock %}

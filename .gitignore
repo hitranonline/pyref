@@ -1,0 +1,16 @@
+*.pyc
+*.pyo
+*.db
+*.swp
+*.swo
+*.swn
+*.swm
+*.swl
+__pycache__
+.DS_Store
+.coverage
+local_settings.py
+db.sqlite3
+geckodriver.log
+.sass-cache
+conf.py
