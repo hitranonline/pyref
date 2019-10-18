@@ -27,10 +27,11 @@ import requests
 import json
 
 token="gx43LyUuTTD0zoTWx8qKpWbWi3euTmx7FCM3fJjY"
-payload = {"bibcode": ["2019MNRAS.488.2332L"],
+payload = {"bibcode": ["2012PhRvA..85c2515Z"],
            "sort": "first_author asc",
-           "format":
-           '''{"ref_json": {"authors": "%I",
+           "format": 
+           '''{"ref_json": {"encoder": "%ZEncoding:latex\\bibitem",
+              "authors": "%I",
               "title": "%T",
               "journal": "%J",
               "volume": "%V",
@@ -46,6 +47,7 @@ r = requests.post("https://api.adsabs.harvard.edu/v1/export/custom", \
 response_json = r.json()
 ref_json = json.loads(response_json['export'])['ref_json']
 
+print('encoder:', ref_json['encoder'])
 print('authors:', ref_json['authors'])
 print('title:', ref_json['title'])
 print('journal:', ref_json['journal'])
