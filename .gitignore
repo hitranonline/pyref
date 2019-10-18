@@ -14,3 +14,4 @@ db.sqlite3
 geckodriver.log
 .sass-cache
 conf.py
+.ipynb_checkpoints
