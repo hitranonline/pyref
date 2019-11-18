@@ -282,4 +282,3 @@ def get_ref_from_doi(doi, ref=None):
     citeproc_json = get_citeproc_json_from_doi(doi)
     ref = parse_citeproc_json(citeproc_json, ref)
     return ref
-
