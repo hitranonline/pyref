@@ -265,7 +265,7 @@ def parse_citeproc_json(citeproc_json, ref=None):
     return ref 
 
 def get_citeproc_json_from_doi(doi):
-    base_url = 'https://dx.doi.org/'
+    base_url = 'https://doi.org/'
     url = base_url + doi
     req = urllib.request.Request(url)
     req.add_header('Accept', 'application/citeproc+json')

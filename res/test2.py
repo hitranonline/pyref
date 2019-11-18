@@ -5,9 +5,8 @@ import requests
 import json
 from urllib import request, parse  
 from bs4 import BeautifulSoup 
-import gscholar 
 
-webapp_path = os.path.join('/Users/fskin/pyref')
+from conf import webapp_path
 sys.path.append(webapp_path)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pyref.settings'
