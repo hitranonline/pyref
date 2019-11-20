@@ -1,8 +1,10 @@
 from django.db import models
 import json
 import urllib.request
+import requests
 from urllib.error import HTTPError
 from .utils import ensure_https
+from pyref.settings import ADS_TOKEN
 
 class Ref(models.Model):
     """A literature reference, for example a journal article, book etc."""
@@ -219,7 +221,36 @@ def get_citeproc_authors(cpd_author):
         names.append('{} {}'.format(initials, family))
     return ', '.join(names)
 
-def parse_citeproc_json(citeproc_json, ref=None):
+
+def get_bibcode(doi):
+    url = requests.get('https://api.adsabs.harvard.edu/v1/search/query',
+                       params={'q': 'doi:{}'.format(doi),
+                               'fl': '*', 'rows':2000},
+                       headers={'Authorization': 'Bearer ' + ADS_TOKEN})
+    ads_json = json.loads(url.text)
+    ads_response = ads_json.get('response', '')
+    bibcode = ads_response['docs'][0]['bibcode']
+    return bibcode
+
+
+def get_fields_from_bibcode(bibcode, fmt='html'):
+    s_format_dict = r'%T'
+    if fmt == 'latex':
+        s_format_dict = r'%ZEncoding:latex %T'
+    payload = {'bibcode': [bibcode],
+               'sort': 'first_author asc',
+               'format': s_format_dict
+              }
+    r = requests.post('https://api.adsabs.harvard.edu/v1/export/custom',
+                      headers={'Authorization': 'Bearer ' + ADS_TOKEN,
+                               'Content-type': 'application/json'}, \
+                      data=json.dumps(payload))
+    response_json = r.json()
+    title = response_json['export'] 
+    return title
+
+
+def parse_citeproc_json(citeproc_json, ref=None, query_ads=True):
     """Parse the provided JSON into a Ref object."""
 
     cpd = json.loads(citeproc_json)
@@ -262,6 +293,15 @@ def parse_citeproc_json(citeproc_json, ref=None):
                   year=year, page_start=page_start, page_end=page_end, doi=doi,
                   url=url, article_number=article_number,
                   citeproc_json=citeproc_json)
+
+    if query_ads:
+        bibcode = get_bibcode(doi)
+        title_html = get_fields_from_bibcode(bibcode)
+        if title_html:
+            ref.title_html = title_html
+        title_latex = get_fields_from_bibcode(bibcode, fmt='latex')
+        if title_latex:
+            ref.title_latex = title_latex
     return ref 
 
 def get_citeproc_json_from_doi(doi):
@@ -278,7 +318,7 @@ def get_citeproc_json_from_doi(doi):
         raise
     return citeproc_json
 
-def get_ref_from_doi(doi, ref=None):
+def get_ref_from_doi(doi, ref=None, query_ads=True):
     citeproc_json = get_citeproc_json_from_doi(doi)
-    ref = parse_citeproc_json(citeproc_json, ref)
+    ref = parse_citeproc_json(citeproc_json, ref, query_ads)
     return ref
