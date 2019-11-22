@@ -243,7 +243,7 @@ def get_fields_from_bibcode(bibcode, fmt='html'):
               }
     r = requests.post('https://api.adsabs.harvard.edu/v1/export/custom',
                       headers={'Authorization': 'Bearer ' + ADS_TOKEN,
-                               'Content-type': 'application/json'}, \
+                               'Content-type': 'application/json'},
                       data=json.dumps(payload))
     response_json = r.json()
     title = response_json['export'] 
