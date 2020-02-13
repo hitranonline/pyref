@@ -1,0 +1,35 @@
+DOI=10.1103/PhysRevA.85.032515
+JOURNAL=Physical Review A
+HTML=Complex-scaled multireference configuration-interaction method to study Be and Be-like cations&#39; (B, C, N, O, Mg) Auger resonances 1s2s&lt;SUP&gt;2&lt;/SUP&gt;2p &lt;SUP&gt;1,3&lt;/SUP&gt;P&lt;SUP&gt;o&lt;/SUP&gt;
+LATEX=Complex-scaled multireference configuration-interaction method to study Be and Be-like cations&#39; (B, C, N, O, Mg) Auger resonances 1s2s$^{2}$2p $^{1,3}$P$^{o}$
+
+DOI=10.1016/j.jqsrt.2019.04.040
+AUTHORS=R. J. Hargreaves, I. E. Gordon, L. S. Rothman, S. A. Tashkun, V. I. Perevalov, A. A. Lukashevskaya, S. N. Yurchenko, J. Tennyson, H. S.P. Müller
+JOURNAL=Journal of Quantitative Spectroscopy and Radiative Transfer
+TITLE=Spectroscopic line parameters of NO, NO2, and N2O for the HITEMP database
+HTML=Spectroscopic line parameters of NO, NO&lt;SUB&gt;2&lt;/SUB&gt;, and N&lt;SUB&gt;2&lt;/SUB&gt;O for the HITEMP database
+LATEX=Spectroscopic line parameters of NO, NO$_{2}$, and N$_{2}$O for the HITEMP database
+VOLUME=232
+PAGE_START=35
+PAGE_END=53
+YEAR=2019
+
+DOI=10.1016/j.jqsrt.2019.106711
+HTML=Calculated line lists for H&lt;SUB&gt;2&lt;/SUB&gt;&lt;SUP&gt;16&lt;/SUP&gt;O and H&lt;SUB&gt;2&lt;/SUB&gt;&lt;SUP&gt;18&lt;/SUP&gt;O with extensive comparisons to theoretical and experimental sources including the HITRAN2016 database
+LATEX=Calculated line lists for H$_{2}$$^{16}$O and H$_{2}$$^{18}$O with extensive comparisons to theoretical and experimental sources including the HITRAN2016 database
+ARTICLE_NUMBER=106711
+
+DOI=10.1016/j.jqsrt.2014.07.005
+AUTHORS=D. Golebiowski, X. De Ghellinck D’Elseghem Vaernewijck, M. Herman, J. Vander Auwera, A. Fayt
+HTML=High sensitivity (femto-FT-CEAS) spectra of carbonyl sulphide between 6200 and 8200 cm&lt;SUP&gt;-1&lt;/SUP&gt;, and new energy pattern in the global rovibrational analysis of &lt;SUP&gt;16&lt;/SUP&gt;O&lt;SUP&gt;12&lt;/SUP&gt;C&lt;SUP&gt;32&lt;/SUP&gt;S
+LATEX=High sensitivity (femto-FT-CEAS) spectra of carbonyl sulphide between 6200 and 8200 cm$^{-1}$, and new energy pattern in the global rovibrational analysis of $^{16}$O$^{12}$C$^{32}$S
+
+DOI=10.1016/j.jqsrt.2017.07.012
+TITLE=First high resolution analysis of the 3ν2 and3ν2−ν2bands of 32S16O2
+HTML=First high resolution analysis of the 3ν&lt;SUB&gt;2&lt;/SUB&gt; and 3ν&lt;SUB&gt;2&lt;/SUB&gt; -ν&lt;SUB&gt;2&lt;/SUB&gt; bands of &lt;SUP&gt;32&lt;/SUP&gt;S&lt;SUP&gt;16&lt;/SUP&gt;O&lt;SUB&gt;2&lt;/SUB&gt;
+LATEX=First high resolution analysis of the 3{\ensuremath{\nu}}$_{2}$ and 3{\ensuremath{\nu}}$_{2}$ -{\ensuremath{\nu}}$_{2}$ bands of $^{32}$S$^{16}$O$_{2}$
+
+DOI=10.1093/mnras/stt1971
+TITLE=The [ /Fe] ratios of very metal-poor stars within the integrated galactic initial mass function theory
+HTML=The [α/Fe] ratios of very metal-poor stars within the integrated galactic initial mass function theory
+LATEX=The [{\ensuremath{\alpha}}/Fe] ratios of very metal-poor stars within the integrated galactic initial mass function theory
