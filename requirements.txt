@@ -1,12 +1,13 @@
 appnope==0.1.0
 attrs==19.3.0
 backcall==0.1.0
+beautifulsoup4==4.8.2
 bleach==3.1.0
 certifi==2019.11.28
 chardet==3.0.4
 decorator==4.4.1
 defusedxml==0.6.0
-Django==1.11.28
+Django==2.2.10
 entrypoints==0.3
 idna==2.8
 importlib-metadata==1.5.0
@@ -43,6 +44,8 @@ qtconsole==4.6.0
 requests==2.22.0
 Send2Trash==1.5.0
 six==1.14.0
+soupsieve==1.9.5
+sqlparse==0.3.0
 terminado==0.8.3
 testpath==0.4.4
 tornado==6.0.3
