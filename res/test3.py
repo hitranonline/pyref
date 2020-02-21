@@ -26,7 +26,7 @@ print(ref)
 import requests
 import json
 
-token="gx43LyUuTTD0zoTWx8qKpWbWi3euTmx7FCM3fJjY"
+token="Enter Token Here"
 payload = {"bibcode": ["2012PhRvA..85c2515Z"],
            "sort": "first_author asc",
            "format": 
