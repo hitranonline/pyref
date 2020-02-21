@@ -146,7 +146,7 @@ Bibcode =  (todos_response['docs'][0]['bibcode'])
 print(Bibcode)
 
 ##########################This section uses ADS to get the LaTeX encoded Title##########################
-token="gx43LyUuTTD0zoTWx8qKpWbWi3euTmx7FCM3fJjY"
+token="Enter Your Token Here"
 payload = {"bibcode": ["{}".format(Bibcode)],
            "sort": "first_author asc",
            "format": 
