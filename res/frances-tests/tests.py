@@ -6,8 +6,8 @@ from django.test import TestCase
 
 import os
 import sys
-#webapp_path = os.path.join('/Users/christian/www/pyref')
-webapp_path = os.path.join('/Users/fskin/pyref')
+#webapp_path = os.path.join('/Users/your_name/www/pyref')
+webapp_path = os.path.join('/Users/your_name/pyref')
 sys.path.append(webapp_path)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pyref.settings'
@@ -26,7 +26,7 @@ print(ref)
 import requests
 import json
 
-token="gx43LyUuTTD0zoTWx8qKpWbWi3euTmx7FCM3fJjY"
+token="Enter Your Token Here"
 payload = {"bibcode": ["2019MNRAS.488.2332L"],
            "sort": "first_author asc",
            "format":
