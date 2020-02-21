@@ -6,8 +6,8 @@ from django.test import TestCase
 
 import os
 import sys
-#webapp_path = os.path.join('/Users/christian/www/pyref')
-webapp_path = os.path.join('/Users/fskin/pyref')
+#webapp_path = os.path.join('/Users/your_name/www/pyref')
+webapp_path = os.path.join('/Users/your_name/pyref')
 sys.path.append(webapp_path)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pyref.settings'
