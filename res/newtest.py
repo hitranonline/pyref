@@ -126,7 +126,7 @@ def get_source_from_doi(doi):
 doi = input("Enter DOI Here: ")
 doi_fetched = get_source_from_doi(doi)
 
-ads_token = '4PtdkIDyxpjjZ1JDYJ4HI59VXJuJD98tACcrnfPv'
+ads_token = 'Enter Token Here'
 token     = ads_token
 
 rdoi = doi
@@ -147,7 +147,7 @@ Bibcode =  (todos_response['docs'][0]['bibcode'])
 print(Bibcode)
 
 ##########################This section uses ADS to get the LaTeX encoded Title##########################
-token="gx43LyUuTTD0zoTWx8qKpWbWi3euTmx7FCM3fJjY"
+token="Enter Token Here"
 payload = {"bibcode": ["{}".format(Bibcode)],
            "sort": "first_author asc",
            "format": 
