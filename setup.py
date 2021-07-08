@@ -21,9 +21,9 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
-    # Project uses reStructuredText, so ensure that the docutils get
-    # installed or upgraded on the target machine
-    install_requires=["docutils>=0.3"],
+# Project uses reStructuredText, so ensure that the docutils get
+# installed or upgraded on the target machine
+install_requires=["docutils>=0.3"],
 
 setup(
     name='refs',
